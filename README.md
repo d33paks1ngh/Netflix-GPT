@@ -32,5 +32,13 @@
 
 - Starts with the login page creation.
 - covert the login page into sign Up page using state variables;
-- React library @Formic to make you life easy to create and work with form in react and for validation check.
+- React library @"Formic" to make you life easy to create and work with form in react and for validation check.
 - Now write form validation code in your login page.
+
+# Part_03 of NetflixGPT 
+- form validation 
+- find the regix of Email and Password
+- Understand about useRef hook...
+
+
+
