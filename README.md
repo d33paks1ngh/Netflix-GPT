@@ -40,5 +40,14 @@
 - find the regix of Email and Password
 - Understand about useRef hook...
 
+ # Part_04 of NetflixGPT
+ - Google fire base set up for authentication
+ - Deploy your project on production using firebase.
+ - create sign up user account  
+
+ # Part 05 of NetflixGPT
+ - impliment sign in and sign Up logic 
+
+ # part 06 of NetflixGPT
 
 

@@ -2,6 +2,11 @@ import React, { useState, useRef } from "react";
 import Header from "./Header";
 import { LOGIN_PAGE_BG_IMG } from "../utils/constants";
 import { checkValidData } from "../utils/validate";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const Login = () => {
   const [signInToggle, SetsignInToggle] = useState(true);
@@ -19,12 +24,54 @@ const Login = () => {
     // validate the form data
     const message = checkValidData(email.current.value, password.current.value);
     seterrorMessage(message);
+
+    if (message) return;
+    // signIn or Sign Up logic...
+
+    if (!signInToggle) {
+      // Sign Up logic
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          console.log("sign up ho gya");
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          seterrorMessage(errorCode + "-" + errorMessage);
+          // ..
+        });
+    } else {
+      // sign in logic...
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log("sign in ho gya");
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          seterrorMessage(errorCode + "-" + errorMessage);
+        });
+    }
   };
 
   return (
-    <div className="flex relative h-  bg-black">
+    <div className="flex relative   bg-black">
       <Header />
-      <img className="w-full" src={LOGIN_PAGE_BG_IMG} alt="bg-img" />
+      <img className="w-full " src={LOGIN_PAGE_BG_IMG} alt="bg-img" />
       <div className="absolute bottom-0 top-24 mx-auto  inset-0 w-4/12  bg-black text-white p-8 border-2 border-black rounded-xl bg-opacity-70">
         <form onSubmit={(e) => e.preventDefault()} className="w-8/12 mx-auto ">
           <h1 className="font-bold text-2xl m-2 p-2">
