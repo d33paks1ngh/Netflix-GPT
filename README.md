@@ -35,19 +35,25 @@
 - React library @"Formic" to make you life easy to create and work with form in react and for validation check.
 - Now write form validation code in your login page.
 
-# Part_03 of NetflixGPT 
-- form validation 
+# Part_03 of NetflixGPT
+
+- form validation
 - find the regix of Email and Password
 - Understand about useRef hook...
 
- # Part_04 of NetflixGPT
- - Google fire base set up for authentication
- - Deploy your project on production using firebase.
- - create sign up user account  
+# Part_04 of NetflixGPT
 
- # Part 05 of NetflixGPT
- - impliment sign in and sign Up logic 
+- Google fire base set up for authentication
+- Deploy your project on production using firebase.
+- create sign up user account
 
- # part 06 of NetflixGPT
+# Part 05 of NetflixGPT
 
+- impliment sign in and sign Up logic
 
+# part 06 of NetflixGPT
+
+- install react-redux and @reduxjs/toolkit
+- set up your redux store.
+- Create a userSlice and configure you store and provide the store to the react app
+- Dispatch the action using onAuthStateChanged() from fire base
