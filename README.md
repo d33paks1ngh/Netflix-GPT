@@ -1,7 +1,6 @@
 # Netflix GPT
 
-#Getting started with create-react-app.
-
+- Getting started with create-react-app.
 - Configure tailwind css in our app.
 
 # Features.
@@ -10,7 +9,6 @@
   - Sign In/ Sign up form
   - Redirect to Browse page
 - Browse (after authentication)
-
 - Header
 - Main movie
 
@@ -18,13 +16,11 @@
   - Short description on the tailer
 
 - Movie suggestion... - Movie Categories - Each Category has N movies and horizontal slidable.
-
 - Footer.
 
 # Additional Features
 
--Netflix GPT
-
+- Netflix GPT
 - Search BAR
 - Movie Suggestions
 
@@ -49,27 +45,37 @@
 
 # Part 05 of NetflixGPT
 
-- impliment sign in and sign Up logic
+- impliment sign in and sign Up logic...
+- Learn the basics about fireBase
+- sign Up Logic
+  - createUserWithEmailAndPassword() method
+- sign in logic
+  - signInWithEmailAndPassword() method
 
 # part 06 of NetflixGPT
 
 - install react-redux and @reduxjs/toolkit
 - set up your redux store.
 - Create a userSlice and configure you store and provide the store to the react app
-- Dispatch the action using onAuthStateChanged() from fire base.
-
+- Set an authentication state observer and get user data using onAuthStateChanged() method.
+- Dispatch an action when onAuthstateChanged().
 - understand about useNavigate() hook from react-router-dom.
 - Navigate to browse page after sign in.
-- Navigate to login page after sign Out.
+- Naviagate to the browse page if new user is signed up.
+- Impliment sign out
+- Navigate to login page after sign out.
+- update the user profile using Fire base.
+- Display the users Photo.
+- Display the users Name.
+- fixing the bug in auto update user data ...
 
-- impliment sign in
-- impliment sign out
-- display the name of user
-- display the photo url of user
-- navigate to browse page after sign in
-- navigate to login page after sign out
-- update the user profile
+# firebase Summery.
 
-# fixing the bug in auto update user data ...
+- Install and config with firebase.
+- Authentication using fireBase.
+- CreateUserWithemailPassword() to impliment sign Up .
+- SignInWithEmailPassword() to impliment sign In.
+- OnAuthStateChange() to observe the object (that is sign in or sign out) and get user details.
+- UpdateProfile() to update the user details into the redux store and showcase the name and user photo .
 
 # Episode_15 NetflixGTP BUilding The Core...

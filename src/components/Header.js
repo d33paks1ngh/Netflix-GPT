@@ -4,16 +4,18 @@ import { USER_IMG } from "../utils/constants";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { removeUser } from "../utils/userSlice";
 const Header = () => {
   const navigate = useNavigate();
 
   const user = useSelector((store) => store.user);
+  const dispatch = useDispatch();
 
   const handleSingOut = () => {
     signOut(auth)
       .then(() => {
+        dispatch(removeUser());
         navigate("/");
       })
       .catch((error) => {

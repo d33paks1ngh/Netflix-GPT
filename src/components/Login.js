@@ -32,8 +32,8 @@ const Login = () => {
     // validate the form data
     const message = checkValidData(email.current.value, password.current.value);
     seterrorMessage(message);
-
     if (message) return;
+
     // signIn or Sign Up logic...
 
     if (!signInToggle) {
@@ -46,7 +46,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-
           updateProfile(user, {
             displayName: name.current.value,
             photoURL: "https://avatars.githubusercontent.com/u/107346760?v=4",
