@@ -32,7 +32,7 @@
 
 - Starts with the login page creation.
 - covert the login page into sign Up page using state variables;
-- React library @"Formic" to make you life easy to create and work with form in react and for validation check.
+- React library "@Formic" to make you life easy to create and work with form in react and for validation check.
 - Now write form validation code in your login page.
 
 # Part_03 of NetflixGPT
@@ -56,4 +56,20 @@
 - install react-redux and @reduxjs/toolkit
 - set up your redux store.
 - Create a userSlice and configure you store and provide the store to the react app
-- Dispatch the action using onAuthStateChanged() from fire base
+- Dispatch the action using onAuthStateChanged() from fire base.
+
+- understand about useNavigate() hook from react-router-dom.
+- Navigate to browse page after sign in.
+- Navigate to login page after sign Out.
+
+- impliment sign in
+- impliment sign out
+- display the name of user
+- display the photo url of user
+- navigate to browse page after sign in
+- navigate to login page after sign out
+- update the user profile
+
+# fixing the bug in auto update user data ...
+
+# Episode_15 NetflixGTP BUilding The Core...

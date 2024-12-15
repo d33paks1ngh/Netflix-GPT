@@ -1,24 +1,32 @@
 import React, { useState, useRef } from "react";
 import Header from "./Header";
+import Browse from "./Browse";
 import { LOGIN_PAGE_BG_IMG } from "../utils/constants";
 import { checkValidData } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [signInToggle, SetsignInToggle] = useState(true);
-
   const [errorMessage, seterrorMessage] = useState(null);
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handle_sign_in_toggle = () => {
     SetsignInToggle(!signInToggle);
   };
 
   const email = useRef(null);
   const password = useRef(null);
-  // const name = useRef(null);
+  const name = useRef(null);
 
   const handleButtonClick = () => {
     // validate the form data
@@ -38,7 +46,31 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          console.log("sign up ho gya");
+
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/107346760?v=4",
+          })
+            .then(() => {
+              // Profile updated!!!
+              // ...
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+
+              navigate("/Browse");
+            })
+            .catch((error) => {
+              seterrorMessage(error.message);
+            });
+
+          console.log("signed up");
           // ...
         })
         .catch((error) => {
@@ -58,6 +90,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log("sign in ho gya");
+          navigate("/browse");
           // ...
         })
         .catch((error) => {
@@ -79,7 +112,7 @@ const Login = () => {
           </h1>
           {!signInToggle && (
             <input
-              // ref={name}
+              ref={name}
               className="bg-opacity-70 border-2 border-slate-400 w-full m-2 p-2  rounded-l bg-black"
               type="text"
               placeholder="Full Name"
