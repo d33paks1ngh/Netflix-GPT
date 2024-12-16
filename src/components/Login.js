@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import Header from "./Header";
-import Browse from "./Browse";
 import { LOGIN_PAGE_BG_IMG } from "../utils/constants";
 import { checkValidData } from "../utils/validate";
 import {
@@ -9,15 +8,14 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [signInToggle, SetsignInToggle] = useState(true);
   const [errorMessage, seterrorMessage] = useState(null);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handle_sign_in_toggle = () => {
@@ -48,7 +46,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/107346760?v=4",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               // Profile updated!!!
@@ -62,8 +60,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-
-              navigate("/Browse");
             })
             .catch((error) => {
               seterrorMessage(error.message);
@@ -89,7 +85,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log("sign in ho gya");
-          navigate("/browse");
           // ...
         })
         .catch((error) => {
@@ -101,7 +96,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex relative   bg-black">
+    <div className="flex relative overflow-hidden  bg-black">
       <Header />
       <img className="w-full " src={LOGIN_PAGE_BG_IMG} alt="bg-img" />
       <div className="absolute bottom-0 top-24 mx-auto  inset-0 w-4/12  bg-black text-white p-8 border-2 border-black rounded-xl bg-opacity-70">

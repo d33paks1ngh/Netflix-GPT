@@ -77,5 +77,38 @@
 - SignInWithEmailPassword() to impliment sign In.
 - OnAuthStateChange() to observe the object (that is sign in or sign out) and get user details.
 - UpdateProfile() to update the user details into the redux store and showcase the name and user photo .
+- SignOut() to impliment sign out.
 
 # Episode_15 NetflixGTP BUilding The Core...
+
+1.  Fix the bug regarding onAuthStateChange()/ protect the browse route.
+2.  unsubscribed to the onAuthStateChange() callback;
+
+# Episode_15 NetflixGPT part_12
+
+- Building our browse page
+- Create account on TMDB
+- Generate the API key get access token and fetch the movie list(now playing) data from the
+  TMDB
+
+# Part_13.
+
+- Put the movies data in out redux store.
+- create the moviesSlice and connect to the app store and add all the json movies data into the slice.
+
+# part_14
+
+- Creating your own custom Hook
+
+# part_15
+
+- Planning for the browse page.
+
+# part_16
+
+- building the video and title components
+- build custom hook for the videbackground component to fetch the video data and upload into the redux store.
+
+# part_17
+
+- building the videobackground
