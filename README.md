@@ -113,6 +113,16 @@
 - building the videobackground component
 
 # part_18
-- Start building the secondry component
+- Start building the secondry component {movie suggestion page}
+- secondry page
+  - MovieList
+    - Movie Card
+- make the beautiful UI for movies and play with scrollbars and tailwind .
+
+# part_19 
+- Make the Movie List dynamic and add more new movies data
+
+
+
 
 
