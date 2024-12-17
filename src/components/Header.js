@@ -50,8 +50,8 @@ const Header = () => {
   };
 
   return (
-    <div className="w-screen sticky top-0  bg-gradient-to-b from-black  z-10  flex justify-between">
-      <img className="w-36 mx-36" src={NETFLIX_LOGO} alt="logo" />
+    <div className="w-[100%] absolute top-0  bg-gradient-to-b from-black  z-10  flex justify-between">
+      <img className="w-36 mx-12" src={NETFLIX_LOGO} alt="logo" />
       {user && (
         <div className="flex gap-2">
           <img
@@ -59,10 +59,7 @@ const Header = () => {
             alt="userImg"
             src={user.photoURL}
           />
-          <button
-            onClick={handleSingOut}
-            className=" mx-4 font-medium text-white"
-          >
+          <button onClick={handleSingOut} className=" mx-4 font-medium text-white">
             Sign Out
           </button>
         </div>

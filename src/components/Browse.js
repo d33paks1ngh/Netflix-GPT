@@ -5,7 +5,7 @@ import SecondryContainer from "./SecondryContainer";
 const Browse = () => {
   useNowPlayingMovies();
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header />
       <MainContainer />
       <SecondryContainer />

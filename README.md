@@ -110,5 +110,9 @@
 - build custom hook for the videbackground component to fetch the video data and upload into the redux store.
 
 # part_17
+- building the videobackground component
 
-- building the videobackground
+# part_18
+- Start building the secondry component
+
+
