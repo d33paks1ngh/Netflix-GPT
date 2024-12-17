@@ -6,7 +6,7 @@ const MovieList = ({ title, movies }) => {
   return (
     <div className="w-screen">
       <h1 className="font-medium ml-8 text-white text-2xl pt-8 ">{title}</h1>
-      <div className=" flex overflow-x-scroll ">
+      <div className=" flex overflow-x-scroll scrollbar scrollbar-hide ">
         <div className="flex ml-8">
           {movies?.map((movie) => (
             <MovieCard key={movie.id} backdrop_path={movie.backdrop_path} />
