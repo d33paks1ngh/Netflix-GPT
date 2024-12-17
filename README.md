@@ -24,7 +24,7 @@
 - Search BAR
 - Movie Suggestions
 
-# Episode_14 NetflixGPT The Beginning...
+# Episode_01 NetflixGPT The Beginning...
 
 - Starts with the login page creation.
 - covert the login page into sign Up page using state variables;
@@ -79,12 +79,12 @@
 - UpdateProfile() to update the user details into the redux store and showcase the name and user photo .
 - SignOut() to impliment sign out.
 
-# Episode_15 NetflixGTP BUilding The Core...
+# Episode_02 NetflixGTP BUilding The Core...
 
 1.  Fix the bug regarding onAuthStateChange()/ protect the browse route.
 2.  unsubscribed to the onAuthStateChange() callback;
 
-# Episode_15 NetflixGPT part_12
+# Episode_02 NetflixGPT part_12
 
 - Building our browse page
 - Create account on TMDB
@@ -110,19 +110,21 @@
 - build custom hook for the videbackground component to fetch the video data and upload into the redux store.
 
 # part_17
+
 - building the videobackground component
 
 # part_18
+
 - Start building the secondry component {movie suggestion page}
 - secondry page
   - MovieList
     - Movie Card
 - make the beautiful UI for movies and play with scrollbars and tailwind .
 
-# part_19 
-- Make the Movie List dynamic and add more new movies data
+# part_19
 
+- Make the Movie List dynamic and add more new movies data.
+- Create curtom hooks for fetching the data for movie list from TMDB.
+- Work on the scroll bar and made browse page amazing with tailwind Css
 
-
-
-
+# Episode_03 NetflixGPT wrapping up...
