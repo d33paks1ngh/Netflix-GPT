@@ -23,7 +23,7 @@ const Browse = () => {
   useTrendingTV();
 
   const show = useSelector((store) => store.showGPT.show);
-  console.log(show)
+  // console.log(show)
   return (
     <div className="box-border overflow-x-hidden">
       <Header />

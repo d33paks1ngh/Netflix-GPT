@@ -65,7 +65,7 @@ const Login = () => {
               seterrorMessage(error.message);
             });
 
-          console.log("signed up");
+          // console.log("signed up");
           // ...
         })
         .catch((error) => {
@@ -84,7 +84,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log("sign in ho gya");
+          // console.log("sign in ho gya");
           // ...
         })
         .catch((error) => {

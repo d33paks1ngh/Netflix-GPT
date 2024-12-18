@@ -128,3 +128,14 @@
 - Work on the scroll bar and made browse page amazing with tailwind Css
 
 # Episode_03 NetflixGPT wrapping up...
+# part_20 and # part_21
+- Building the GPT button
+- Build GPT page
+  - Build GPT search Bar
+  - Build GPT Movie suggestion page.
+
+# part_22 Building multi Language Pages
+- Every text should come from the constant file so that we can change it.
+- Build you GPT search page multiLingual .
+- Learn the power of constant file 
+- every handcoded text should come from constant file that is a healthy practice.
