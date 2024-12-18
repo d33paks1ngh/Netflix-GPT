@@ -136,6 +136,8 @@
 
 # part_22 Building multi Language Pages
 - Every text should come from the constant file so that we can change it.
-- Build you GPT search page multiLingual .
-- Learn the power of constant file 
-- every handcoded text should come from constant file that is a healthy practice.
+- Build you GPT search page and add  multi-language feature .
+- Learn the power of constant file .
+- every hand-coded text should come from constant file that is a healthy practice.
+
+# Part_23 Intergrate GPT APIs (get open AI key)

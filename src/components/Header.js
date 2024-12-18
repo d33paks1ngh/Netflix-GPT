@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { NETFLIX_LOGO } from "../utils/constants";
 import { useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -79,9 +79,9 @@ const Header = () => {
           )}
           <button
             onClick={handleGPTClick}
-            className="hover:scale-125 ease-in-out duration-500 hover:opacity-90 font-bold text-small text-white px-2 my-4 h-8 rounded-lg bg-red-600"
+            className="hover:scale-90 ease-in-out duration-500 hover:opacity-90 font-bold text-small text-white px-2 my-4 h-8 rounded-lg bg-red-600"
           >
-            🚀GPT+
+            {show ? "🚀GPT+" : "Home"}
           </button>
           <img
             className="h-8 my-4 rounded-md"
