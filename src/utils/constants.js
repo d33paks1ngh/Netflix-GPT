@@ -36,3 +36,6 @@ export const SUPPORTED_LANG = [
     Name: "Spanish",
   },
 ];
+
+export const OPEN_AI_KEY =
+  "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";
