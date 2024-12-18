@@ -5,6 +5,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { removeUser, addUser } from "../utils/userSlice";
+import { ToggleshowGPTsearch } from "../utils/GPTslice";
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
@@ -49,17 +50,30 @@ const Header = () => {
       });
   };
 
+  const handleGPTClick = () => {
+    dispatch(ToggleshowGPTsearch());
+  };
+
   return (
-    <div className="w-[100%] absolute top-0  bg-gradient-to-b from-black  z-10  flex justify-between">
+    <div className="w-[100%] absolute top-0  bg-gradient-to-b from-black  z-20  flex justify-between items-center">
       <img className="w-36 mx-12" src={NETFLIX_LOGO} alt="logo" />
       {user && (
         <div className="flex gap-2">
+          <button
+            onClick={handleGPTClick}
+            className="hover:scale-125 ease-in-out duration-500 hover:opacity-90 font-bold text-small text-white px-2 my-4 h-8 rounded-lg bg-red-600"
+          >
+            🚀GPT+
+          </button>
           <img
             className="h-8 my-4 rounded-md"
             alt="userImg"
             src={user.photoURL}
           />
-          <button onClick={handleSingOut} className=" mx-4 font-medium text-white">
+          <button
+            onClick={handleSingOut}
+            className=" mx-4 font-medium text-white"
+          >
             Sign Out
           </button>
         </div>
