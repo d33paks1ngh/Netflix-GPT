@@ -154,6 +154,11 @@
 - Now search for the movies in TMDB Api and show it on our GPT movie suggestion page.
 
 # part_24 Building GPT Movie Suggestions UI
+
 - Build you GPT Movie Suggestion page by using movie card component
 
 # Part_25 Securing our API keys.
+
+# Part_26 Memoization
+
+# Part_27 making our app responsive..
