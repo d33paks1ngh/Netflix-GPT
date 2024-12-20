@@ -11,8 +11,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNmRlMzBjMzk5NDU1MDZjOGU2ODI0YzUwN2U2YmM5NSIsIm5iZiI6MTczNDMzNjM5OS40NDYsInN1YiI6IjY3NWZkZjhmYWFkZTMyNTliOTI5NWZhZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JMXBCHfjgZaBdO5iJPyNuwdV-bN8GpLz70E77OUk-ZM",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -37,5 +36,5 @@ export const SUPPORTED_LANG = [
   },
 ];
 
-export const OPEN_AI_KEY =
-  "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";
+export const OPEN_AI_KEY = process.env.REACT_APP_OPEN_AI_KEY;
+export const GROQ_API_KEY = process.env.REACT_APP_GROQ_API_KEY;

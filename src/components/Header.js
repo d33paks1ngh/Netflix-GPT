@@ -61,7 +61,7 @@ const Header = () => {
     dispatch(changeLanguage(e.target.value));
   };
   return (
-    <div className="w-[100%] absolute top-0  bg-gradient-to-b from-black  z-20  flex justify-between items-center">
+    <div className="w-[100%] absolute top-0   bg-gradient-to-b from-black  z-20  flex justify-between items-center">
       <img className="w-36 mx-12" src={NETFLIX_LOGO} alt="logo" />
       {user && (
         <div className="flex gap-2">
@@ -81,7 +81,7 @@ const Header = () => {
             onClick={handleGPTClick}
             className="hover:scale-90 ease-in-out duration-500 hover:opacity-90 font-bold text-small text-white px-2 my-4 h-8 rounded-lg bg-red-600"
           >
-            {show ? "🚀GPT+" : "Home"}
+            {show ? "Home" : "🚀GPT+"}
           </button>
           <img
             className="h-8 my-4 rounded-md"

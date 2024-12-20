@@ -128,16 +128,32 @@
 - Work on the scroll bar and made browse page amazing with tailwind Css
 
 # Episode_03 NetflixGPT wrapping up...
+
 # part_20 and # part_21
+
 - Building the GPT button
 - Build GPT page
   - Build GPT search Bar
   - Build GPT Movie suggestion page.
 
 # part_22 Building multi Language Pages
+
 - Every text should come from the constant file so that we can change it.
-- Build you GPT search page and add  multi-language feature .
+- Build you GPT search page and add multi-language feature .
 - Learn the power of constant file .
 - every hand-coded text should come from constant file that is a healthy practice.
 
 # Part_23 Intergrate GPT APIs (get open AI key)
+
+- Create account on the Open Al plateform
+- create a secret api key
+- Install open AI using NPM
+- Call the Open ai using a good prompt. model (3.5-tubro).
+- set your billing cycle
+- After getting the movies result store it into an array
+- Now search for the movies in TMDB Api and show it on our GPT movie suggestion page.
+
+# part_24 Building GPT Movie Suggestions UI
+- Build you GPT Movie Suggestion page by using movie card component
+
+# Part_25 Securing our API keys.

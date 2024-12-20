@@ -1,10 +1,10 @@
 import { API_OPTIONS } from "../utils/constants";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addTrendinTV } from "../utils/moviesSlice";
 const useTrendingTV = () => {
   // fetch data from TMDB API and update the moviesSlice and update the store.
-
+  const TrendingTV = useSelector((store) => store.movies.trendingTV);
   const dispatch = useDispatch();
   const getTrendingTV = async () => {
     const data = await fetch(
@@ -17,7 +17,7 @@ const useTrendingTV = () => {
   };
 
   useEffect(() => {
-    getTrendingTV();
+    !TrendingTV && getTrendingTV();
   }, []);
 };
 export default useTrendingTV;

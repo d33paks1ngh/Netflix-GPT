@@ -1,9 +1,10 @@
 import { API_OPTIONS } from "../utils/constants";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addPopularTV } from "../utils/moviesSlice";
 const usePopularTV = () => {
   // fetch data from TMDB API and update the moviesSlice and update the store.
+  const popularTV = useSelector((store) => store.movies.popularTV);
 
   const dispatch = useDispatch();
   const getPopularTV = async () => {
@@ -17,7 +18,7 @@ const usePopularTV = () => {
   };
 
   useEffect(() => {
-    getPopularTV();
+    !popularTV && getPopularTV();
   }, []);
 };
 export default usePopularTV;
