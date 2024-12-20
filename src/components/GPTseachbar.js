@@ -9,7 +9,7 @@ import Groq from "groq-sdk";
 import { GROQ_API_KEY } from "../utils/constants";
 const GPTseachbar = () => {
   const groq = new Groq({
-    apiKey: "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",
+    apiKey: "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",
     dangerouslyAllowBrowser: true,
   });
   // const handleform = (e) => e.preventdefault();
